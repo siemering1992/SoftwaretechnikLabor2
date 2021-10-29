@@ -14,25 +14,34 @@ void main()
 {
 	// local variables
 	Customer aPerson;
-	int error;
 	// set person's details
-	aPerson.setName("Joe");
-	aPerson.setSurname("Bloggs");
-	aPerson.setAddress("Hauptstrasse", 21, "45220", "Klein Bollersen", "Deutschland");
-	error = aPerson.setDob(29, FEB, 1980);
-
-	// check if day matches month
-	if (error)
+	try
 	{
-		// oops - no such day, what shall I do?!
-		cout << "no such day" << endl;
-	}
-	else
-	{
-		// everything is fine, carry on ...
-
+		aPerson.setName("Joe");
+		aPerson.setSurname("Bloggs");
+		aPerson.setAddress("Hauptstrasse", 21, "45220", "Klein Bollersen", "Deutschland");
+		aPerson.setDob(30, APR, 1980);
 		print(aPerson);
 	}
+	catch (exception& e)
+	{
+		cout << e.what() << endl;
+	}
+
+	// check if day matches month
+	//if (error)
+	//{
+		// oops - no such day, what shall I do?!
+	//	cout << "no such day" << endl;
+	//}
+	//else
+	//{
+		// everything is fine, carry on ...
+
+	//	print(aPerson);
+	//}
+
+	
 }
 
 void print(Customer aPerson)

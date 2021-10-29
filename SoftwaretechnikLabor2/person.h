@@ -16,7 +16,7 @@ public:
 	string name();
 	void setSurname(string);
 	string surname();
-	int setDob(unsigned int, MONTH, int);
+	void setDob(unsigned int, MONTH, int);
 	Date dob();
 
 	Person();

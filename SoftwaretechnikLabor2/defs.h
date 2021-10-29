@@ -1,4 +1,5 @@
 #pragma once
+#include <map>
 #include <string>
 using namespace std;
 #define OK 0
@@ -24,3 +25,15 @@ struct Address
 	string city;
 	string country;
 };
+
+
+map<int, string> Map1 = { {5, "Deutschland",},
+							{6, "China",},
+							{4, "Dänemarkt",},
+							{4, "Belgien",},
+							{10, "Amerika",},
+							{8, "Niederlande",}};
+
+
+
+

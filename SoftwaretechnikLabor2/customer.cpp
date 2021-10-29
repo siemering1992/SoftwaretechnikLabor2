@@ -1,6 +1,7 @@
 #include "customer.h"
 #include "defs.h"
 #include <iostream>
+#include <map>
 using namespace std;
 
 
@@ -9,9 +10,22 @@ void Customer::setAddress(string street, unsigned int number, string postcode, s
 {
     _address.street = street;
     _address.number = number;
-    _address.postcode = postcode;
+
+    for (it = first.begin(); it != first.end(); ++it) {
+        cout << it->first << " => " << it->second << '\n';
+    }
+    if (country == Map1 && str.length(postcode) == Map1)
+    {
+        _address.postcode = postcode;
+        _address.country = country;
+    }
+    catch (const std::exception&)
+    {
+
+    }
+    
     _address.city = city;
-    _address.country = country;
+    
 
 }
 
