@@ -10,7 +10,7 @@ using namespace std;
 
 void print(Customer);
 // main function, no need to return anything
-void main()
+int main()
 {
 	// local variables
 	Customer aPerson;
@@ -26,6 +26,7 @@ void main()
 	catch (exception& e)
 	{
 		cout << e.what() << endl;
+		return 1;
 	}
 
 	// check if day matches month
@@ -41,7 +42,7 @@ void main()
 	//	print(aPerson);
 	//}
 
-	
+	return 0;
 }
 
 void print(Customer aPerson)

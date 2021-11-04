@@ -27,12 +27,14 @@ struct Address
 };
 
 
-map<int, string> Map1 = { {5, "Deutschland",},
-							{6, "China",},
-							{4, "Dänemarkt",},
-							{4, "Belgien",},
-							{10, "Amerika",},
-							{8, "Niederlande",}};
+const map<string, int> Map1 {
+	{ "Deutschland", 5},
+	{"China", 6}
+	/*{4, "Dänemarkt"},
+	{4, "Belgien"},
+	{10, "Amerika"},
+	{8, "Niederlande"}*/
+};
 
 
 

@@ -1,26 +1,12 @@
 #include "person.h"
 #include "defs.h"
-#include <sstream>
 #include <iostream>
+#include <cctype>
 using namespace std;
 
-// Default Konstruktor Person
-Person::Person()
-{
-    setName("Max");
-    setSurname("Mustermann");
-    // Falsches Datum initialisiert, um den Aufruf als Konstruktor nachzuvollziehen
-    try
-    {
-        setDob(01, JAN, 1000);
-    }
-    catch (const std::exception&)
-    {
 
-    }
-   
-};
 // Konstruktor Person
+Person::Person() {};
 Person::Person(string name, string surname, Date date)
 {
     setName(name);
@@ -30,6 +16,14 @@ Person::Person(string name, string surname, Date date)
 
 void Person::setName(string name)
 {
+
+    for (unsigned int i = 0; i < name.size(); ++i)
+    {
+        if (!isalpha(name[i]))
+        {
+            throw exception("A Persons name has to be only alpha chars.");
+        }
+    }
     _name = name;
 }
 

@@ -1,29 +1,22 @@
 #include "customer.h"
 #include "defs.h"
 #include <iostream>
-#include <map>
 using namespace std;
 
 
 
 void Customer::setAddress(string street, unsigned int number, string postcode, string city, string country)
 {
+    
+
+    if (postcode.length() != Map1.at(country)) {
+        throw exception("Invalid length of postal code for given country!");
+    };
+
     _address.street = street;
     _address.number = number;
-
-    for (it = first.begin(); it != first.end(); ++it) {
-        cout << it->first << " => " << it->second << '\n';
-    }
-    if (country == Map1 && str.length(postcode) == Map1)
-    {
-        _address.postcode = postcode;
-        _address.country = country;
-    }
-    catch (const std::exception&)
-    {
-
-    }
-    
+    _address.postcode = postcode;
+    _address.country = country;
     _address.city = city;
     
 
