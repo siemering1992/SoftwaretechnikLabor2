@@ -19,7 +19,7 @@ int main()
 	{
 		aPerson.setName("Joe");
 		aPerson.setSurname("Bloggs");
-		aPerson.setAddress("Hauptstrasse", 21, "45220", "Klein Bollersen", "Niederlande");
+		aPerson.setAddress("Hauptstrasse", 21, "45220", "Klein Bollersen", "Deutschland");
 		aPerson.setDob(30, APR, 1980);
 		print(aPerson);
 	}
@@ -28,19 +28,6 @@ int main()
 		cout << e.what() << endl;
 		return 1;
 	}
-
-	// check if day matches month
-	//if (error)
-	//{
-		// oops - no such day, what shall I do?!
-	//	cout << "no such day" << endl;
-	//}
-	//else
-	//{
-		// everything is fine, carry on ...
-
-	//	print(aPerson);
-	//}
 
 	return 0;
 }

@@ -34,6 +34,13 @@ string Person::name()
 
 void Person::setSurname(string surname)
 {
+    for (unsigned int i = 0; i < surname.size(); ++i)
+    {
+        if (!isalpha(surname[i]))
+        {
+            throw exception("A Persons surname has to be only alpha chars.");
+        }
+    }
     _surname = surname;
 }
 
