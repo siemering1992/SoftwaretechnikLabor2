@@ -19,7 +19,7 @@ int main()
 	{
 		aPerson.setName("Joe");
 		aPerson.setSurname("Bloggs");
-		aPerson.setAddress("Hauptstrasse", 21, "45220", "Klein Bollersen", "Deutschland");
+		aPerson.setAddress("Hauptstrasse", 21, "45700", "Klein Bollersen", "Deutschland");
 		aPerson.setDob(30, APR, 1980);
 		print(aPerson);
 	}

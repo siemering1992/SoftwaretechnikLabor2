@@ -9,9 +9,33 @@ void Customer::setAddress(string street, unsigned int number, string postcode, s
 {
     
 
-    if (postcode.length() != Map1.at(country)) {
-        throw exception("Invalid length of postal code for given country!");
+    if (postcode.length() != Map1.at(country)) 
+    {
+          throw exception("Invalid length of postal code for given country!");   
     };
+
+    for (unsigned int i = 0; i < postcode.size(); ++i)
+        if ( country == "Deutschland" && isalpha(postcode[i]))
+        {
+            throw exception("A postal code in Germany are only chars possible!");
+        }
+
+    for (unsigned int i = 0; i < city.size(); ++i)
+    {
+        if (!isalpha(city[i]) && !isspace(city[i]))
+        {
+         
+            throw exception("A city have to be only alpha chars.");  
+        }
+    }
+
+    for (unsigned int i = 0; i < country.size(); ++i)
+    {
+        if (!isalpha(country[i]))
+        {
+            throw exception("A country have to be only alpha chars.");
+        }
+    }
 
     _address.street = street;
     _address.number = number;
